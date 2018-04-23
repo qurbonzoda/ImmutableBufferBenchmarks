@@ -19,9 +19,9 @@ open class BufferBenchmark {
 
     @Param(FIXED_SIZE_FIXED_COPY_FOR,
             FIXED_SIZE_FIXED_COPY_CLONE,
-            FIXED_SIZE_FIXED_COPY_SYSTEM_ARRAYCOPY,
             FIXED_SIZE_FIXED_COPY_COPY_OF,
             FIXED_SIZE_FIXED_COPY_COPY_OF_RANGE,
+            FIXED_SIZE_FIXED_COPY_SYSTEM_ARRAYCOPY,
             FIXED_SIZE_VARIABLE_COPY_FOR,
             FIXED_SIZE_VARIABLE_COPY_SYSTEM_ARRAYCOPY,
             VARIABLE_SIZE_FOR,
@@ -37,9 +37,9 @@ open class BufferBenchmark {
         this.iBuffer = when (this.bufferType) {
             FIXED_SIZE_FIXED_COPY_FOR                   -> buffer.fixedSize.fixedCopy.`for`.Buffer(this.maxBufferSize)
             FIXED_SIZE_FIXED_COPY_CLONE                 -> buffer.fixedSize.fixedCopy.clone.Buffer(this.maxBufferSize)
-            FIXED_SIZE_FIXED_COPY_SYSTEM_ARRAYCOPY      -> buffer.fixedSize.fixedCopy.systemArraycopy.Buffer(this.maxBufferSize)
             FIXED_SIZE_FIXED_COPY_COPY_OF               -> buffer.fixedSize.fixedCopy.copyOf.Buffer(this.maxBufferSize)
             FIXED_SIZE_FIXED_COPY_COPY_OF_RANGE         -> buffer.fixedSize.fixedCopy.copyOfRange.Buffer(this.maxBufferSize)
+            FIXED_SIZE_FIXED_COPY_SYSTEM_ARRAYCOPY      -> buffer.fixedSize.fixedCopy.systemArraycopy.Buffer(this.maxBufferSize)
             FIXED_SIZE_VARIABLE_COPY_FOR                -> buffer.fixedSize.variableCopy.`for`.Buffer(this.maxBufferSize)
             FIXED_SIZE_VARIABLE_COPY_SYSTEM_ARRAYCOPY   -> buffer.fixedSize.variableCopy.systemArraycopy.Buffer(this.maxBufferSize)
             VARIABLE_SIZE_FOR                           -> buffer.variableSize.`for`.Buffer(this.maxBufferSize)
